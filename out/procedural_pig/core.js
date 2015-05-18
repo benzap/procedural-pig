@@ -14,7 +14,7 @@ procedural_pig.core.update_state = (function update_state(state){
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"color","color",1011675173),cljs.core.mod.call(null,(new cljs.core.Keyword(null,"color","color",1011675173).cljs$core$IFn$_invoke$arity$1(state) + 0.7),(255)),new cljs.core.Keyword(null,"angle","angle",1622094254),(new cljs.core.Keyword(null,"angle","angle",1622094254).cljs$core$IFn$_invoke$arity$1(state) + 0.1)], null);
 });
 procedural_pig.core.draw_state = (function draw_state(state){
-quil.core.background.call(null,(240));
+quil.core.background.call(null,(13));
 
 quil.core.fill.call(null,new cljs.core.Keyword(null,"color","color",1011675173).cljs$core$IFn$_invoke$arity$1(state),(255),(255));
 
@@ -31,7 +31,7 @@ quil.core.ellipse.call(null,x,y,(100),(100));
 return quil.core.pop_matrix.call(null);
 });
 procedural_pig.core.procedural_pig = (function procedural_pig__$1(){
-return quil.sketch.sketch.call(null,new cljs.core.Keyword(null,"draw","draw",1358331674),procedural_pig.core.draw_state,new cljs.core.Keyword(null,"middleware","middleware",1462115504),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [quil.middleware.fun_mode], null),new cljs.core.Keyword(null,"setup","setup",1987730512),procedural_pig.core.setup,new cljs.core.Keyword(null,"size","size",1098693007),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(500),(500)], null),new cljs.core.Keyword(null,"update","update",1045576396),procedural_pig.core.update_state,new cljs.core.Keyword(null,"host","host",-1558485167),"procedural-pig");
+return quil.sketch.sketch.call(null,new cljs.core.Keyword(null,"draw","draw",1358331674),procedural_pig.core.draw_state,new cljs.core.Keyword(null,"middleware","middleware",1462115504),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [quil.middleware.fun_mode], null),new cljs.core.Keyword(null,"setup","setup",1987730512),procedural_pig.core.setup,new cljs.core.Keyword(null,"size","size",1098693007),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [window.innerWidth,window.innerHeight], null),new cljs.core.Keyword(null,"update","update",1045576396),procedural_pig.core.update_state,new cljs.core.Keyword(null,"host","host",-1558485167),"procedural-pig");
 });
 goog.exportSymbol('procedural_pig.core.procedural_pig', procedural_pig.core.procedural_pig);
 
