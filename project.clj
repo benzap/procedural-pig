@@ -15,6 +15,7 @@
              :compiler
              {:output-to "js/main.js"
               :output-dir "out"
+              :asset-path "/out"
               :main "procedural_pig.core"
               :optimizations :none
               :pretty-print true}}]})

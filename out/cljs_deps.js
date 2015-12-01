@@ -1,5 +1,6 @@
 goog.addDependency("base.js", ['goog'], []);
 goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.object', 'goog.string.StringBuffer', 'goog.array']);
+goog.addDependency("../procedural_pig/utils.js", ['procedural_pig.utils'], ['cljs.core']);
 goog.addDependency("../processing.js", ['org.processingjs.Processing'], []);
 goog.addDependency("../quil/middlewares/deprecated_options.js", ['quil.middlewares.deprecated_options'], ['cljs.core']);
 goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
@@ -9,4 +10,7 @@ goog.addDependency("../quil/core.js", ['quil.core'], ['org.processingjs.Processi
 goog.addDependency("../quil/middlewares/navigation_3d.js", ['quil.middlewares.navigation_3d'], ['cljs.core', 'quil.core']);
 goog.addDependency("../quil/middlewares/fun_mode.js", ['quil.middlewares.fun_mode'], ['cljs.core', 'quil.core']);
 goog.addDependency("../quil/middleware.js", ['quil.middleware'], ['cljs.core', 'quil.middlewares.navigation_3d', 'quil.middlewares.fun_mode']);
-goog.addDependency("../procedural_pig/core.js", ['procedural_pig.core'], ['cljs.core', 'quil.core', 'quil.middleware']);
+goog.addDependency("../procedural_pig/sketches/sandbox_01.js", ['procedural_pig.sketches.sandbox_01'], ['cljs.core', 'quil.core', 'quil.middleware']);
+goog.addDependency("../procedural_pig/sketches/example_ellipse.js", ['procedural_pig.sketches.example_ellipse'], ['cljs.core', 'quil.core', 'quil.middleware']);
+goog.addDependency("../procedural_pig/core.js", ['procedural_pig.core'], ['procedural_pig.sketches.example_ellipse', 'cljs.core', 'procedural_pig.sketches.sandbox_01']);
+goog.addDependency("../procedural_pig/random.js", ['procedural_pig.random'], ['cljs.core', 'procedural_pig.utils']);
