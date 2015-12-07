@@ -13,7 +13,7 @@
   (q/frame-rate 60)
   (q/color-mode :rgb 255)
   (q/background 7)
-  {:color (q/color 0 0 10)
+  {:color (q/color 0 0 255)
    :angle 0
    :beetles 
    [(create-beetle)
@@ -24,18 +24,16 @@
     ]})
 
 (defn update-state [state]
-  {
-   
-   })
+  state)
 
 (defn draw-state [state]
   (q/fill (:color state))
   (q/background 7)
   (doseq [beetle (:beetles state)]
     (let [[x y] (-> beetle :location)]
-      (log "Beetle" beetle x y)
+      (log "Drawing Beetle" x y)
       (q/fill (:color state))
-      (q/ellipse x y 5 10))
+      (q/ellipse x y 10 10))
     )
   (q/ellipse 10 10 5 10)
   )
