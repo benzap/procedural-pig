@@ -18,3 +18,7 @@
   (-> val 
       (clamp-lower min)
       (clamp-upper max)))
+
+(defn get-dimensions []
+  [(.-innerWidth js/window)
+   (.-innerHeight js/window)])

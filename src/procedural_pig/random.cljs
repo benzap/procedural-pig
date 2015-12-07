@@ -1,5 +1,6 @@
 (ns procedural-pig.random
-  (:require [procedural-pig.utils :refer [log]]))
+  (:require [procedural-pig.utils :as utils :refer [log]]
+            [quil.core :as q :include-macros true]))
 
 (def dist-resolution 10000000)
 
@@ -45,3 +46,17 @@
         [[percent true]
          [(- 100 percent) false]]]
     (pick-rand-by-dist distrib)))
+
+(defn location 
+  [& {:keys 
+      [top-bound right-bound
+       bottom-bound left-bound]
+      :or {top-bound 0
+           right-bound 0
+           bottom-bound 0
+           left-bound 0}}]
+  (let [[width height] (utils/get-dimensions)
+        x (q/random left-bound (- width right-bound))
+        y (q/random top-bound (- height bottom-bound))]
+    [x y]
+    ))

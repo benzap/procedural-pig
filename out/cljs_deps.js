@@ -12,5 +12,7 @@ goog.addDependency("../quil/middlewares/fun_mode.js", ['quil.middlewares.fun_mod
 goog.addDependency("../quil/middleware.js", ['quil.middleware'], ['cljs.core', 'quil.middlewares.navigation_3d', 'quil.middlewares.fun_mode']);
 goog.addDependency("../procedural_pig/sketches/sandbox_01.js", ['procedural_pig.sketches.sandbox_01'], ['cljs.core', 'quil.core', 'quil.middleware']);
 goog.addDependency("../procedural_pig/sketches/example_ellipse.js", ['procedural_pig.sketches.example_ellipse'], ['cljs.core', 'quil.core', 'quil.middleware']);
-goog.addDependency("../procedural_pig/core.js", ['procedural_pig.core'], ['procedural_pig.sketches.example_ellipse', 'cljs.core', 'procedural_pig.sketches.sandbox_01']);
-goog.addDependency("../procedural_pig/random.js", ['procedural_pig.random'], ['cljs.core', 'procedural_pig.utils']);
+goog.addDependency("../procedural_pig/random.js", ['procedural_pig.random'], ['cljs.core', 'quil.core', 'procedural_pig.utils']);
+goog.addDependency("../procedural_pig/sketches/water_beetles.js", ['procedural_pig.sketches.water_beetles'], ['procedural_pig.random', 'cljs.core', 'quil.core', 'quil.middleware', 'procedural_pig.utils']);
+goog.addDependency("../procedural_pig/core.js", ['procedural_pig.core'], ['procedural_pig.sketches.example_ellipse', 'cljs.core', 'procedural_pig.sketches.sandbox_01', 'procedural_pig.sketches.water_beetles']);
+goog.addDependency("../procedural_pig/lib/fsm.js", ['procedural_pig.lib.fsm'], ['cljs.core', 'procedural_pig.utils']);
